@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std ;
+int main()
+{
+int a,b ;
+cin >> a >> b ;
+
+int maxm = max(a,b) ;
+if(6%(7-maxm)==0)
+    cout<<"1/"<<6/(7-maxm);
+else if((7-maxm)==4)
+    cout<< "2/3" ;
+else
+    cout<<7-maxm<<"/6";
+
+}
