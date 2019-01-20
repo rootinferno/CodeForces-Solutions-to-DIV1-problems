@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std ;
+int main()
+{
+  int t,n;
+  int balance=0 ;
+  int ans = 0;
+  cin >> t ;
+  while(t--)
+  {
+    cin >> n ;
+  if(n== -1)
+   {
+    if(balance)
+        balance-- ;
+    else
+        ans++ ;}
+else
+    balance+=n ;
+
+}
+cout << ans << endl;
+return 0 ;
+}
