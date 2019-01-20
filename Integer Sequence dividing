@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std ;
+int main()
+
+{
+long long int n ;
+int value ;
+cin >> n ;
+value = ((n*(n+1)/2)) % 2 ;
+cout<< value ;
+
+return 0 ;
+}
