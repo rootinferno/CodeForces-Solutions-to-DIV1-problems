@@ -1,0 +1,32 @@
+
+#include<bits/stdc++.h>
+#define mod 1000000007
+#define F first
+#define S second
+#define pb push_back
+using namespace std;
+typedef long long int ll;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll t=1;
+    cin>>t;
+    while(t--)
+    {
+        ll l,r,d,ans=0;
+        cin>>l>>r>>d;
+        ans=d;
+        if(l <= ans && ans <= r)
+        {
+            ll z=r+d;
+            ll x=z%d;
+            ans=z;
+            ans=z-x;
+        }
+        cout<<ans<<"\n";
+    }
+    return 0;
+}
