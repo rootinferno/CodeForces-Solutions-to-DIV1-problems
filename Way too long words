@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    string given;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> given;
+        if (given.length() < 11)
+            cout << given << endl;
+        else
+            cout << given[0] << given.length() - 2 << given.back() << endl;
+    }
+    return 0;
+}
