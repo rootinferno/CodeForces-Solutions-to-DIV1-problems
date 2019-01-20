@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std ;
+int main()
+
+{
+vector <int> v1,v2,v3;
+  int a,b,i; int count =0 ;
+  cin>>a;
+  for(i=1;i<=a;i++)
+  {
+      cin>>b;
+      if(b==1)
+        v1.push_back(i) ;
+      else if(b==2)
+        v2.push_back(i) ;
+      else if(b==3)
+        v3.push_back(i) ;
+  }
+
+    b = min(v1.size(),min(v2.size(),v3.size()));
+cout << b << endl;
+
+for(i=0;i<b;i++)
+{
+    cout << v1[i] << " " << v2[i] << " " << v3[i] << endl ;
+}
+
+return 0 ;
+
+}
