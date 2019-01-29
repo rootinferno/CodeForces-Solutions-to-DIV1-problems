@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std ;
+#define lli long long int
+
+int main()
+{
+ios::sync_with_stdio(0) ;
+cin.tie(0);
+lli t,n,i;
+lli maxm; lli minm ;
+cin >> t ;
+vector<int>v ;
+for(i=0;i<t;i++)
+{
+    cin >> n ;
+    v.push_back(n) ;
+}
+
+for(i=0;i<t;i++)
+{
+if(i==0)
+    maxm = abs(v[0]-v[t-1]) ;
+else if(i==(t-1))
+    maxm = abs(v[t-1]-v[0]) ;
+else
+    maxm = max(abs(v[i]-v[t-1]),abs(v[i]-v[0])) ;
+
+if(i==0)
+    minm = abs(v[i+1]-v[i]);
+else if(i==(t-1))
+    minm = abs(v[t-1]-v[t-2]) ;
+else
+    minm = min(abs(v[i+1]-v[i]),abs(v[i]-v[i-1])) ;
+
+ cout << minm << " " << maxm << endl;
+
+}
+return 0 ;
+
+}
+
